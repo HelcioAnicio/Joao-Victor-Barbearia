@@ -253,7 +253,6 @@ button { font-family: inherit; cursor: pointer; color: inherit; background: none
   justify-content: center;
   text-align: center;
   padding: 96px 24px 64px;
-  overflow: hidden;
 }
 /* Gradiente de fundo — no lugar de CSS background, usamos um div com gradiente */
 .djv-hero-bg {
@@ -678,8 +677,9 @@ button { font-family: inherit; cursor: pointer; color: inherit; background: none
 .djv-info-list dd a:hover { color: var(--gold); }
 .djv-muted { color: var(--ink-faint); font-size: 13px; }
 .djv-contato-cta { display: flex; gap: 12px; flex-wrap: wrap; }
-.djv-map { position: relative; display: block; border-radius: var(--radius); overflow: hidden; }
+.djv-map { position: relative; display: block; border-radius: var(--radius); overflow: hidden; min-height: 380px; }
 .djv-map img { width: 100%; display: block; }
+.djv-map iframe { display: block; }
 .djv-map-pin {
   position: absolute;
   left: 16px;

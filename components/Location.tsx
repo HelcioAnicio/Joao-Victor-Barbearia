@@ -1,6 +1,4 @@
-import Image from "next/image";
 import { Kicker } from "./ui/Kicker";
-import { Diamond } from "./ui/Diamond";
 import { LocationButtons } from "./LocationButtons";
 
 const ADDRESS  = "Rua Ilhéus, 88 — Bairro São Luiz";
@@ -69,26 +67,18 @@ export function Location({ whatsapp, onAgendar }: { whatsapp: string; onAgendar:
           <LocationButtons mapsUrl={MAPS_URL} onAgendar={onAgendar} />
         </div>
 
-        <a
-          className="djv-map"
-          href={MAPS_URL}
-          target="_blank"
-          rel="noreferrer noopener"
-          aria-label="Ver Rua Ilhéus, 88 no Google Maps"
-        >
-          <Image
-            src="/assets/mapa.jpg"
-            alt="Mapa mostrando a localização da Barbearia João Victor na Rua Ilhéus, 88"
-            width={600}
-            height={450}
-            sizes="(max-width: 880px) 100vw, 50vw"
-            quality={80}
-            style={{ objectFit: "cover", width: "100%", height: "auto", borderRadius: "14px" }}
+        <div className="djv-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d337.97893142052175!2d-44.125764364104654!3d-19.929625253398672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6eb05b1a7fe3f%3A0x12e3bc626ee55e1!2sBarbearia%20do%20Jo%C3%A3o%20Victor!5e0!3m2!1spt-BR!2sbr!4v1782233824308!5m2!1spt-BR!2sbr"
+            width="600"
+            height="450"
+            style={{ border: 0, width: "100%", height: "100%", borderRadius: "14px" }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Localização da Barbearia João Victor"
           />
-          <span className="djv-map-pin">
-            <Diamond size={8} />&nbsp;São Luiz
-          </span>
-        </a>
+        </div>
       </div>
     </section>
   );
