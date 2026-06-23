@@ -312,6 +312,11 @@ button { font-family: inherit; cursor: pointer; color: inherit; background: none
   font-size: clamp(62px, 13vw, 150px);
   margin: 2px 0;
   padding-inline: 10px;
+  min-height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
 }
 .djv-hero-sub {
   max-width: 520px;
