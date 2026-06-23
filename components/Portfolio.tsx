@@ -9,33 +9,19 @@ type Shot = {
   mod?: "tall" | "wide" | "";
   width: number;
   height: number;
-  placeholder?: boolean;
 };
 
 const SHOTS: Shot[] = [
-  { src: "/assets/portfolio/foto-1.png", alt: "Trabalho — fade + risca",      mod: "tall", width: 600, height: 800 },
-  { src: "/assets/portfolio/foto-2.png", alt: "Trabalho — barba desenhada",    mod: "",     width: 400, height: 400 },
-  { src: "/assets/portfolio/foto-3.jpg", alt: "Trabalho — clássico social",    mod: "",     width: 400, height: 400, placeholder: true },
-  { src: "/assets/portfolio/foto-4.jpg", alt: "Trabalho — degradê navalhado",  mod: "wide", width: 800, height: 400, placeholder: true },
-  { src: "/assets/portfolio/foto-5.jpg", alt: "Trabalho — pompadour",          mod: "",     width: 400, height: 400, placeholder: true },
-  { src: "/assets/portfolio/foto-6.jpg", alt: "Trabalho — kids",               mod: "",     width: 400, height: 400, placeholder: true },
-  { src: "/assets/portfolio/foto-7.jpg", alt: "Trabalho — sobrancelha",        mod: "",     width: 400, height: 400, placeholder: true },
-  { src: "/assets/portfolio/foto-8.jpg", alt: "Trabalho — antes e depois",     mod: "tall", width: 600, height: 800, placeholder: true },
+  { src: "/assets/portfolio/foto-1.png", alt: "Trabalho — fade + cachos",          mod: "tall", width: 600, height: 800 },
+  { src: "/assets/portfolio/foto-2.png", alt: "Trabalho — barba desenhada",         mod: "",     width: 400, height: 400 },
+  { src: "/assets/portfolio/foto-3.jpg", alt: "Trabalho — risca + degradê lateral", mod: "",     width: 400, height: 533 },
+  { src: "/assets/portfolio/foto-4.jpg", alt: "Trabalho — risca angulada frente",   mod: "",     width: 400, height: 533 },
+  { src: "/assets/portfolio/foto-5.jpg", alt: "Trabalho — fade + cachos costas",    mod: "wide", width: 800, height: 400 },
+  { src: "/assets/portfolio/foto-6.jpg", alt: "Trabalho — resultado final",         mod: "",     width: 400, height: 533 },
 ];
 
 function GalleryItem({ shot }: { shot: Shot }) {
   const cls = "djv-gallery-item" + (shot.mod ? " is-" + shot.mod : "");
-
-  if (shot.placeholder) {
-    return (
-      <div className={cls}>
-        <div className="djv-ph" style={{ height: "100%" }}>
-          <span>{shot.alt.replace("Trabalho — ", "")}</span>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className={cls}>
       <Image
@@ -80,10 +66,6 @@ export function Portfolio() {
           <GalleryItem key={shot.src} shot={shot} />
         ))}
       </div>
-
-      <p className="djv-gallery-note">
-        Espaços reservados — mande as fotos dos cortes e eu encaixo aqui.
-      </p>
     </section>
   );
 }
