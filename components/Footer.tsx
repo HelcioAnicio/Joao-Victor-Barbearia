@@ -10,7 +10,7 @@ export function Footer() {
       <div className="djv-footer-in">
         <div className="djv-footer-brand">
           <Image
-            src="/assets/logo.jpg"
+            src="/assets/logo.png"
             alt=""
             width={46}
             height={46}

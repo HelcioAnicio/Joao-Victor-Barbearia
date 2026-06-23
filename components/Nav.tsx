@@ -38,7 +38,7 @@ export function Nav({ onAgendar }: { onAgendar: () => void }) {
       <div className="djv-nav-in">
         <a className="djv-brand" href="#top" onClick={(e) => go(e, "#top")} aria-label="Barbearia João Victor — início">
           <Image
-            src="/assets/logo.jpg"
+            src="/assets/logo.png"
             alt=""
             width={34}
             height={34}

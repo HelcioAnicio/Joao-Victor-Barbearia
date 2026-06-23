@@ -19,7 +19,7 @@ export function Hero() {
         {/* Logo circular com next/image */}
         <div className="djv-hero-logo">
           <Image
-            src="/assets/logo.jpg"
+            src="/assets/logo.png"
             alt="Logotipo da Barbearia João Victor"
             width={94}
             height={94}
