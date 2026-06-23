@@ -12,12 +12,11 @@ type Shot = {
 };
 
 const SHOTS: Shot[] = [
-  { src: "/assets/portfolio/foto-1.png", alt: "Trabalho — fade + cachos",          mod: "tall", width: 600, height: 800 },
-  { src: "/assets/portfolio/foto-2.png", alt: "Trabalho — barba desenhada",         mod: "",     width: 400, height: 400 },
-  { src: "/assets/portfolio/foto-3.jpg", alt: "Trabalho — risca + degradê lateral", mod: "",     width: 400, height: 533 },
-  { src: "/assets/portfolio/foto-4.jpg", alt: "Trabalho — risca angulada frente",   mod: "",     width: 400, height: 533 },
-  { src: "/assets/portfolio/foto-5.jpg", alt: "Trabalho — fade + cachos costas",    mod: "wide", width: 800, height: 400 },
-  { src: "/assets/portfolio/foto-6.jpg", alt: "Trabalho — resultado final",         mod: "",     width: 400, height: 533 },
+  { src: "/assets/foto-1.jpeg", alt: "Trabalho — fade + cachos lateral",     mod: "tall", width: 600, height: 800 },
+  { src: "/assets/foto-3.jpeg", alt: "Trabalho — risca + degradê",           mod: "",     width: 400, height: 533 },
+  { src: "/assets/foto-4.jpeg", alt: "Trabalho — risca angulada frente",     mod: "",     width: 400, height: 533 },
+  { src: "/assets/foto-5.jpeg", alt: "Trabalho — fade + cachos costas",      mod: "wide", width: 800, height: 533 },
+  { src: "/assets/foto-6.jpeg", alt: "Trabalho — resultado final",           mod: "",     width: 400, height: 533 },
 ];
 
 function GalleryItem({ shot }: { shot: Shot }) {

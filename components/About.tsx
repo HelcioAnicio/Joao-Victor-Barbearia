@@ -7,7 +7,7 @@ export function About() {
       <div className="djv-about-grid">
         <div className="djv-about-media">
           <Image
-            src="/assets/foto-joao.jpg"
+            src="/assets/foto-joao.jpeg"
             alt="João Victor trabalhando na barbearia"
             width={480}
             height={600}
