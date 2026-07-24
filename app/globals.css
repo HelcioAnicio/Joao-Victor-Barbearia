@@ -213,11 +213,12 @@ button { font-family: inherit; cursor: pointer; color: inherit; background: none
   color: var(--gold);
   margin-top: 3px;
 }
-.djv-links { display: flex; align-items: center; gap: 30px; }
+.djv-links { display: flex; align-items: center; gap: 34px; }
 .djv-links a {
   font-size: 13px;
   letter-spacing: .02em;
   color: var(--ink-soft);
+  padding: 10px 2px;
   transition: color .2s;
 }
 .djv-links a:hover { color: var(--gold); }
@@ -265,7 +266,10 @@ button { font-family: inherit; cursor: pointer; color: inherit; background: none
 /* Moldura com losangos nos extremos */
 .djv-hero-frame {
   position: absolute;
-  inset: 18px;
+  top: 84px;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
   border: 1px solid var(--line);
   border-radius: 6px;
   z-index: 1;
@@ -448,6 +452,91 @@ button { font-family: inherit; cursor: pointer; color: inherit; background: none
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 5px 11px;
+}
+
+/* ── AVALIAÇÕES ──────────────────────────────────────────────────────────── */
+.djv-reviews {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.djv-reviews-viewport {
+  flex: 1;
+  overflow: hidden;
+}
+.djv-reviews-track {
+  display: flex;
+  transition: transform .45s cubic-bezier(.25,.46,.45,.94);
+}
+.djv-reviews-slide {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.djv-review-card {
+  background: var(--bg-2);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  transition: background .25s, border-color .25s;
+}
+.djv-review-card:hover { background: var(--bg-3); border-color: var(--line); }
+.djv-review-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.djv-review-stars { display: flex; gap: 3px; font-size: 13px; }
+.djv-review-stars .is-on { color: var(--gold); }
+.djv-review-stars .is-off { color: var(--line); }
+.djv-review-google { color: var(--ink-faint); font-size: 15px; }
+.djv-review-text {
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+.djv-review-name {
+  display: block;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.djv-review-nav {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color .2s, color .2s, transform .2s;
+}
+.djv-review-nav:hover { border-color: var(--gold); color: var(--gold); transform: scale(1.05); }
+.djv-reviews-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+.djv-reviews-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--line);
+  transition: background .2s, transform .2s;
+}
+.djv-reviews-dot.is-active { background: var(--gold); transform: scale(1.2); }
+@media (max-width: 680px) {
+  .djv-review-nav { width: 36px; height: 36px; font-size: 13px; }
+  .djv-reviews { gap: 10px; }
 }
 
 /* ── SOBRE ───────────────────────────────────────────────────────────────── */
@@ -789,6 +878,32 @@ button { font-family: inherit; cursor: pointer; color: inherit; background: none
 }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; scroll-behavior: auto !important; }
+}
+
+/* ── WHATSAPP FLUTUANTE ──────────────────────────────────────────────────── */
+.djv-wa-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 90;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.45);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.djv-wa-float:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 14px 36px rgba(0,0,0,.5);
+}
+@media (max-width: 520px) {
+  .djv-wa-float { right: 14px; bottom: 14px; width: 52px; height: 52px; font-size: 26px; }
 }
 
 /* ── utilitário acessibilidade ───────────────────────────────────────────── */

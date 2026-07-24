@@ -17,6 +17,9 @@ const SHOTS: Shot[] = [
   { src: "/assets/foto-4.jpeg", alt: "Trabalho — risca angulada frente",     mod: "",     width: 400, height: 533 },
   { src: "/assets/foto-5.jpeg", alt: "Trabalho — fade + cachos costas",      mod: "wide", width: 800, height: 533 },
   { src: "/assets/foto-6.jpeg", alt: "Trabalho — resultado final",           mod: "",     width: 400, height: 533 },
+  { src: "/assets/foto-7.jpeg", alt: "Trabalho — fade baixo com topo texturizado", mod: "", width: 400, height: 533 },
+  { src: "/assets/foto-8.jpeg", alt: "Atendimento — corte infantil em andamento", mod: "wide", width: 800, height: 533 },
+  { src: "/assets/foto-9.jpeg", alt: "Trabalho — fade e nuca alinhada, vista de trás", mod: "", width: 400, height: 533 },
 ];
 
 function GalleryItem({ shot }: { shot: Shot }) {

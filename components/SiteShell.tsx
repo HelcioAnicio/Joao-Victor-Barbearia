@@ -4,7 +4,7 @@ import { Nav } from "./Nav";
 import { Services } from "./Services";
 import { Location } from "./Location";
 
-const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP ?? "5500000000000";
+const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP ?? "5531997992262";
 
 function scrollToAgenda() {
   const el = document.querySelector("#agenda") as HTMLElement | null;
