@@ -1,0 +1,21 @@
+# Barbearia João Victor
+
+> Barbearia no bairro São Luiz, Contagem - MG, em atividade desde 2011. Site de página única com serviços, portfólio, avaliações, horários e agendamento via WhatsApp.
+
+## Site
+- [Página inicial](https://www.joaovictor-barbearia.com.br/): apresentação, serviços, avaliações, portfólio de cortes, horários e formas de contato.
+
+## Contato
+- WhatsApp: +55 31 99799-2262
+- Instagram: https://www.instagram.com/joaovictorbarbearia_/
+- Endereço: Rua Ilhéus, 88 — Bairro São Luiz, Contagem - MG, 32073-200
+
+## Horário de funcionamento
+- Terça a sábado: 8h–12h e 13h–18h
+- Domingo e segunda: fechado
+
+## Serviços
+- Corte (clássico ou moderno, máquina e tesoura, acabamento na navalha)
+- Barba terapia (toalha quente, óleos e finalização)
+- Sobrancelha (alinhamento na navalha)
+- Tintura (cobertura de grisalho e cor sob medida)
