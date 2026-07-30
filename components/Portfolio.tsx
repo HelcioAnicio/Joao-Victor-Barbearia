@@ -108,7 +108,6 @@ export function Portfolio() {
             fill
             sizes="(max-width: 880px) 100vw, 800px"
             quality={85}
-            priority
             style={{ objectFit: "cover" }}
           />
           <span className="djv-gallery-feature-hint">Clique para ampliar</span>

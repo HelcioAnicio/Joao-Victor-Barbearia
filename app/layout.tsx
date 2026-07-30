@@ -1,5 +1,27 @@
 import type { Metadata, Viewport } from "next";
+import { Cormorant_Garamond, Hanken_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
+const hanken = Hanken_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-hanken",
+  display: "swap",
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-space-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Barbearia João Victor — São Luiz, desde 2011",
@@ -60,16 +82,16 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>{children}</body>
+    <html
+      lang="pt-BR"
+      className={`${cormorant.variable} ${hanken.variable} ${spaceMono.variable}`}
+    >
+      <body>
+        <a className="djv-skip-link" href="#conteudo-principal">
+          Pular para o conteúdo
+        </a>
+        {children}
+      </body>
     </html>
   );
 }
