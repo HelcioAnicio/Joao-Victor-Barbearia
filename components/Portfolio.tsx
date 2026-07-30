@@ -94,46 +94,48 @@ export function Portfolio() {
         </a>
       </div>
 
-      <button
-        type="button"
-        className="djv-gallery-feature"
-        onClick={() => openLightbox(activeIndex)}
-        aria-label={`Ampliar foto: ${active.alt}`}
-      >
-        <Image
-          key={active.src}
-          src={active.src}
-          alt={active.alt}
-          fill
-          sizes="(max-width: 880px) 100vw, 900px"
-          quality={85}
-          priority
-          style={{ objectFit: "cover" }}
-        />
-        <span className="djv-gallery-feature-hint">Clique para ampliar</span>
-      </button>
+      <div className="djv-gallery-wrap">
+        <button
+          type="button"
+          className="djv-gallery-feature"
+          onClick={() => openLightbox(activeIndex)}
+          aria-label={`Ampliar foto: ${active.alt}`}
+        >
+          <Image
+            key={active.src}
+            src={active.src}
+            alt={active.alt}
+            fill
+            sizes="(max-width: 880px) 100vw, 800px"
+            quality={85}
+            priority
+            style={{ objectFit: "cover" }}
+          />
+          <span className="djv-gallery-feature-hint">Clique para ampliar</span>
+        </button>
 
-      <div className="djv-gallery-thumbs" role="list" aria-label="Miniaturas da galeria">
-        {SHOTS.map((shot, index) => (
-          <button
-            key={shot.src}
-            type="button"
-            role="listitem"
-            className={"djv-gallery-thumb" + (index === activeIndex ? " is-active" : "")}
-            onClick={() => setActiveIndex(index)}
-            aria-label={shot.alt}
-            aria-current={index === activeIndex}
-          >
-            <Image
-              src={shot.src}
-              alt={shot.alt}
-              fill
-              sizes="120px"
-              quality={60}
-              style={{ objectFit: "cover" }}
-            />
-          </button>
-        ))}
+        <div className="djv-gallery-thumbs" role="list" aria-label="Miniaturas da galeria">
+          {SHOTS.map((shot, index) => (
+            <button
+              key={shot.src}
+              type="button"
+              role="listitem"
+              className={"djv-gallery-thumb" + (index === activeIndex ? " is-active" : "")}
+              onClick={() => setActiveIndex(index)}
+              aria-label={shot.alt}
+              aria-current={index === activeIndex}
+            >
+              <Image
+                src={shot.src}
+                alt={shot.alt}
+                fill
+                sizes="120px"
+                quality={60}
+                style={{ objectFit: "cover" }}
+              />
+            </button>
+          ))}
+        </div>
       </div>
 
       {lightboxOpen && (

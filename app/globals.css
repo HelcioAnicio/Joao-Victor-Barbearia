@@ -630,6 +630,10 @@ button { font-family: inherit; cursor: pointer; color: inherit; background: none
 }
 
 /* ── PORTFÓLIO ───────────────────────────────────────────────────────────── */
+.djv-gallery-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
 .djv-gallery-feature {
   display: block;
   position: relative;
