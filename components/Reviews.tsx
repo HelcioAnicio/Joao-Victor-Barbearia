@@ -68,7 +68,7 @@ for (let i = 0; i < REVIEWS.length; i += GROUP_SIZE) {
 
 function Stars({ rating }: { rating: number }) {
   return (
-    <div className="djv-review-stars" aria-label={`${rating} de 5 estrelas`}>
+    <div className="djv-review-stars" role="img" aria-label={`${rating} de 5 estrelas`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <FaStar key={i} aria-hidden="true" className={i < rating ? "is-on" : "is-off"} />
       ))}

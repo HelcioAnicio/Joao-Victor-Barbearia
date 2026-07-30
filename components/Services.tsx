@@ -17,9 +17,9 @@ export function Services({ onAgendar }: { onAgendar: () => void }) {
         <Kicker>O que fazemos</Kicker>
         <h2 id="servicos-title" className="djv-h2 djv-display">Serviços</h2>
       </div>
-      <div className="djv-svc-grid" role="list">
+      <ul className="djv-svc-grid" role="list">
         {SERVICES.map(([n, title, desc]) => (
-          <article className="djv-svc" key={n} role="listitem">
+          <li className="djv-svc" key={n}>
             <div className="djv-svc-top">
               <span className="djv-svc-n" aria-hidden="true">{n}</span>
               <Diamond size={8} />
@@ -32,9 +32,9 @@ export function Services({ onAgendar }: { onAgendar: () => void }) {
                 Agendar →
               </button>
             </div>
-          </article>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

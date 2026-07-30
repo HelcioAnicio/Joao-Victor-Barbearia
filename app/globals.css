@@ -403,6 +403,7 @@ button { font-family: inherit; cursor: pointer; color: inherit; background: none
   border: 1px solid var(--line-2);
   border-radius: var(--radius);
   overflow: hidden;
+  list-style: none;
 }
 .djv-svc {
   background: var(--bg-2);
